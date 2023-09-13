@@ -1,7 +1,7 @@
 ---
 title: "Week 02: COVID Visualization Activity"
 date: "September, 11 2023"
-author: "**`[[`**Your Name**`]]`**"
+author: "**Bowen Jiang**"
 ---
 
 Today, we'll be working with a data set related to COVID.
@@ -36,6 +36,19 @@ covid_data_count |>
 ```
 
 1. Write code for a plot and describe what you observe?
+```{r}
+  covid_data_count |> 
+    filter(state == "MA") |> 
+    ggplot(aes(x = date, y = Deaths, color = race )) + geom_line()
+```
+  We can see that there is dramatic difference between people whose ethnicity is and other races.
+  
 2. Are there any conclusions you can draw?
+  Yes. People whose ethnicity is white have higher probability of death.
+  
 3. What were you not able to do due to not having the R knowledge?
+  I will not be able to easily pull out all of the data and modify them into graphs, especially not with Excel.
+
 4. What other data would be useful to better understand this data?
+  Age would be a good variable to add if pausible because it has high relevancy with death.
+
